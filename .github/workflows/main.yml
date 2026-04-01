@@ -22,7 +22,9 @@ jobs:
         sudo apt-get install -y google-chrome-stable
 
     - name: Install dependencies
-      run: pip install selenium pytest allure-pytest webdriver-manager
+      run: |
+        pip install selenium pytest allure-pytest webdriver-manager
 
     - name: Run tests
-      run: pytest -v tests/
+      run: |
+        pytest -v tests/
